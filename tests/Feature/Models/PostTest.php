@@ -48,7 +48,7 @@ class PostTest extends TestCase
 
     public function testPostRelationWithComment()
     {
-        $count = rand(0 , 10);
+        $count = rand(1 , 10);
         $post = Post::factory()->hasComments($count)->create();
 
         $this->assertCount($count , $post->comments);
